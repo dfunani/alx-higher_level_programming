@@ -1,1 +1,1 @@
-repo for py first prohject[1;5D[C
+# 0x00.py
