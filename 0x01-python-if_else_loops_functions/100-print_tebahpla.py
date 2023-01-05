@@ -5,4 +5,4 @@ for i, v in enumerate(range(122, 96, -1)):
         temp = chr(v)
     else:
         temp = chr(v - 32)
-    print(temp, end="")
+    print("{}".format(temp), end="")
