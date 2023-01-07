@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-from sys import stdout
+from os import write
 if __name__ == "__main__":
-    stdout.write("#pythoniscool\n")
+    write(1, "#pythoniscool\n".encode("UTF-8"))
