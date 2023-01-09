@@ -5,3 +5,4 @@ def delete_at(my_list=[], idx=0):
     res = []
     [res.append(i) for i in range(len(my_list)) if i != idx]
     my_list = list(res)
+    return my_list
