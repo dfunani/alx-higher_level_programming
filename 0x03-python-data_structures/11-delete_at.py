@@ -4,4 +4,4 @@ def delete_at(my_list=[], idx=0):
         return my_list
     res = []
     [res.append(i) for i in range(len(my_list)) if i != idx]
-    return res
+    my_list = list(res)
