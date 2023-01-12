@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
+    if not roman_string:
+        return 0
     conversion = {
             "I": 1,
             "V": 5,
@@ -11,6 +13,8 @@ def roman_to_int(roman_string):
         }
     r = 0
     for i,c in enumerate(roman_string):
+        if c not in conversion:
+            return 0
         try:
             if  c == 'I' and roman_string[i + 1] in ["V", "X"]:
                 r -= conversion['I']
