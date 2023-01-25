@@ -8,7 +8,7 @@ def safe_print_list(my_list=[], x=0):
                 break
             print(my_list[i], end="")
             sum += 1
-    except:
+    except Exception:
         pass
     print()
     return sum
