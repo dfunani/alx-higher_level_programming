@@ -26,7 +26,7 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         else:
             self.__width = width
-        number_of_instances += 1
+        Rectangle.number_of_instances += 1
 
     def area(self):
         return self.height * self.width
@@ -38,7 +38,7 @@ class Rectangle:
             return 2 * self.height + 2 * self.width
 
     def __del__(self):
-        number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
         print('Bye rectangle...')
 
     def __repr__(self):
