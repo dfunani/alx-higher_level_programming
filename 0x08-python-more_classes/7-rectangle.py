@@ -51,7 +51,7 @@ class Rectangle:
             res = ""
             for i in range(self.height):
                 for j in range(self.width):
-                    res += Rectangle.print_symbol
+                    res += str(self.print_symbol)
                 if i == self.height - 1:
                     break
                 res += "\n"
