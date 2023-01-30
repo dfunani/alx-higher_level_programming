@@ -28,6 +28,7 @@ class Rectangle:
         else:
             self.__width = width
         Rectangle.number_of_instances += 1
+        Rectangle.print_symbol = Rectangle.print_symbol
 
     def area(self):
         return self.height * self.width
