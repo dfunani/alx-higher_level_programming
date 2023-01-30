@@ -2,6 +2,8 @@
 """
 Rectangle class to serve as an abstraction of a Rectangle
 """
+
+
 class Rectangle:
     """
     New rectangle can be created
