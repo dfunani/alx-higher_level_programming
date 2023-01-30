@@ -36,7 +36,7 @@ class Rectangle:
 
     def __del__(self):
         print('Bye rectangle...')
-        
+
     def __repr__(self):
         return "Rectangle({}, {})".format(self.width, self.height)
 
