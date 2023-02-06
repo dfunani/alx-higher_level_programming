@@ -7,5 +7,5 @@ creates class
 def is_same_class(obj, a_class):
     """checks class"""
     if not obj or not a_class:
-        return Fals
+        return False
     return a_class is type(obj)
