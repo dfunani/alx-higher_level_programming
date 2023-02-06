@@ -8,6 +8,9 @@ def is_kind_of_class(obj, a_class):
     """
     checks kind
     """
-    if not obj or not a_class:
+    try:
+        if not obj or not a_class:
+            return False
+        return isinstance(obj, a_class)
+    except TypeError:
         return False
-    return isinstance(obj, a_class)
