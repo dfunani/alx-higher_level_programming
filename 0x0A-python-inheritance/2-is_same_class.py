@@ -6,8 +6,6 @@ creates class
 
 def is_same_class(obj, a_class):
     """checks class"""
-    if not obj:
-        return False
-    if not a_class:
-        return False
-    return obj is a_class
+    if not obj or not a_class:
+        return Fals
+    return a_class is type(obj)
