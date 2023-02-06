@@ -18,6 +18,10 @@ class Rectangle(BaseGeometry):
         """ Extends area method"""
         return self.__height * self.__width
 
-    def __str__():
+    def __str__(self):
         """ prints rect"""
-        return f"[Rectangle] {self__width}/{self.__height}"
+        return f"[Rectangle] {self.__width}/{self.__height}"
+
+    def __repr__(self):
+        """ prints rect"""
+        return f"[Rectangle] {self.__width}/{self.__height}"
