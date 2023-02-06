@@ -4,7 +4,7 @@ creates a check
 """
 
 
-def is_kind_of_class(obj, a_class):
+def inherits_from(obj, a_class):
     """
     checks kind
     """
