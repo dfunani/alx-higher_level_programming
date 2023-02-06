@@ -23,7 +23,7 @@ class Rectangle(BaseGeometry):
     """ Creates a rect class"""
     def __init__(self, width, height):
         """ Init vclass"""
-        if integer_validator("width", width):
+        if self.integer_validator("width", width):
             self.width = width
-        if integer_validator("height", height):
+        if self.integer_validator("height", height):
             self.height = height
