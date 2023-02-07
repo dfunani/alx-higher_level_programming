@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+"""8-class_to_json
+create class obj
+"""
+import json
+
+
+def class_to_json(obj):
+    """ create class obj"""
+    return dict(json.dumps(obj))
