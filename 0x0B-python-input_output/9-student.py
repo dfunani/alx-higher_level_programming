@@ -11,5 +11,5 @@ class Student:
         self.__last_name = last_name
         self.__age = age
 
-    def __dict__():
-        return json.dumps{f"'first_name': '{first_name}', 'last_name': '{last_name}', 'age': '{age}'"}
+    def to_json(self):
+        return self.__dict__
