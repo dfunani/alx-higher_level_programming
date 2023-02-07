@@ -1,0 +1,11 @@
+#!/usr/bin/python3
+"""0-read_file.py
+creates ile readers and writers
+"""
+
+
+def read_file(filename=""):
+    """ File Reader """
+    with open(filename, "r") as file:
+        for line in file.readlines():
+            print(line)
