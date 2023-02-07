@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+"""load_from_json_file
+creates ile readers and writers
+"""
+import json
+
+
+def load_from_json_file(filename):
+    """ File Reader """
+    return json.load(filename)
