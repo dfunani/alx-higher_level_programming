@@ -19,7 +19,7 @@ class Student:
                 if type(attr) is not str:
                     return self._dict__
                 for key in self.__dict__:
-                    if i === j:
+                    if key == attr:
                         res[key] = self.__dict__[key]
                 return res
         return self.__dict__
