@@ -21,5 +21,5 @@ class Student:
                 for key in self.__dict__:
                     if key == attr:
                         res[attr] = self.__dict__[key]
-                return res
+            return res
         return self.__dict__
