@@ -20,6 +20,6 @@ class Student:
                     return self._dict__
                 for key in self.__dict__:
                     if key == attr:
-                        res[key] = self.__dict__[key]
+                        res[attr] = self.__dict__[key]
                 return res
         return self.__dict__
