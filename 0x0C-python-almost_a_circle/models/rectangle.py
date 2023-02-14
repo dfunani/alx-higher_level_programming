@@ -21,7 +21,7 @@ class Rectangle(Base):
         if Rectangle.c_type(y, "y") and Rectangle.c_val(y, "y"):
             self.__y = y
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ updates the instance attrs """
         if args:
             for arg in range(len(args)):
