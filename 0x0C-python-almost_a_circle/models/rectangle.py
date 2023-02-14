@@ -12,10 +12,14 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """ constr class and inherit from base """
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        if Rectangle.check_type(width, "width") and Rectangle.check_val(width, "width"):
+            self.__width = width
+        if Rectangle.check_type(height, "height") and Rectangle.check_val(height, "height"):
+            self.__height = height
+        if Rectangle.check_type(x, "x") and Rectangle.check_val(x, "x"):
+            self.__x = x
+        if Rectangle.check_type(y, "y") and Rectangle.check_val(y, "y"):
+            self.__y = y
 
     @property
     def width(self):
