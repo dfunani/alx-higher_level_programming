@@ -23,11 +23,21 @@ class Rectangle(Base):
 
     def update(self, *args):
         """ updates the instance attrs """
-        self.id = args[0]
-        self.width = args[1]
-        self.height = args[2]
-        self.x = args[3]
-        self.y = args[4]
+        if args:
+            for arg in range(len(args)):
+                if arg == 0:
+                    if not args[i]:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = args[0]
+                elif arg == 1:
+                    self.width = args[1]
+                elif arg == 2:
+                    self.height = args[2]
+                elif arg == 3:
+                    self.x = args[3]
+                elif arg == 4:
+                    self.y = args[4]
 
     def __str__(self):
         """ str rep of the rect """
