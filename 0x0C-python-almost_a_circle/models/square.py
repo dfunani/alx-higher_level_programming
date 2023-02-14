@@ -24,18 +24,6 @@ class Square(Rectangle):
 
     @size.setter
     def size(self, val):
-        if check_t(val, "size") and check_v(val, "size"):
+        if Rectangle.c_type(val, "w") and Rectangle.c_value(val, "w"):
             self.width = val
             self.height = val
-
-    @staticmethod
-    def check_t(val, attr):
-        if type(val) is int:
-            return True
-        raise TypeError(f"{attr} must be an integer")
-
-    @staticmethod
-    def check_v(val, attr):
-        if val <= 0 and attr == "size":
-            raise ValueError(f"{attr} must be > 0")
-        return True
