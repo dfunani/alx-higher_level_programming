@@ -39,6 +39,22 @@ class Rectangle(Base):
                 if arg == 4:
                     self.y = args[arg]
 
+        elif kwargs:
+            for key in kwargs:
+                if key == "id":
+                    if not kwargs[key]:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = kwargs[key]
+                if key == "width":
+                    self.width = kwargs[key]
+                if key == "height":
+                    self.height = kwargs[key]
+                if key == "x":
+                    self.x = kwargs[key]
+                if key == "y":
+                    self.y = kwargs[key]
+
     def __str__(self):
         """ str rep of the rect """
         a = f"{self.x}/{self.y}"
