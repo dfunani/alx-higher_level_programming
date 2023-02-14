@@ -28,6 +28,8 @@ class Rectangle(Base):
 
     def display(self):
         """ print the rect """
+        if x < 0 or y < 0:
+            return None
         for i in range(self.height):
             print("#" * self.width)
         return None
