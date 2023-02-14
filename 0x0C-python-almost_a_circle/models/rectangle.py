@@ -26,7 +26,7 @@ class Rectangle(Base):
         for i in range(self.height):
             print("#" * self.width)
         return None
-            
+
     def area(self):
         """ area function """
         return self.width * self.height
