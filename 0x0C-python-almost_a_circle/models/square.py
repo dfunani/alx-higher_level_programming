@@ -24,6 +24,6 @@ class Square(Rectangle):
 
     @size.setter
     def size(self, val):
-        if Rectangle.c_type(val, "w") and Rectangle.c_value(val, "w"):
+        if Rectangle.c_type(val, "w") and Rectangle.c_val(val, "w"):
             self.width = val
             self.height = val
