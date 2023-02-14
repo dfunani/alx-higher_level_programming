@@ -12,22 +12,21 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """ constr class and inherit from base """
         super().__init__(size, size, x, y, id)
-        if check_t(size, "size") and check_v(size, "size"):
-            self.__size = size
 
     def __str__(self):
         """ str rep of the rect """
         a = f"{self.x}/{self.y}"
-        return f"[Square] ({self.id}) {a} - {self.size}"
+        return f"[Square] ({self.id}) {a} - {self.width}"
 
     @property
     def size(self):
-        return self.__size
+        return self.width
 
     @size.setter
     def size(self, val):
         if check_t(val, "size") and check_v(val, "size"):
-            self.__size = val
+            self.width = val
+            self.height = val
 
     @staticmethod
     def check_t(val, attr):
