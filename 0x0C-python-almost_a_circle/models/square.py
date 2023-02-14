@@ -11,9 +11,9 @@ class Square(Rectangle):
 
     def __init__(self, size, x=0, y=0, id=None):
         """ constr class and inherit from base """
+        super().__init__(size, size, x, y, id)
         if check_t(size, "size") and check_v(size, "size"):
             self.__size = size
-        super().__init__(size, size, x, y, id)
 
     def __str__(self):
         """ str rep of the rect """
@@ -39,6 +39,4 @@ class Square(Rectangle):
     def check_v(val, attr):
         if val <= 0 and attr == "size":
             raise ValueError(f"{attr} must be > 0")
-        if val < 0 and (attr == "x" or attr == "y"):
-            raise ValueError(f"{attr} must be >= 0")
         return True
