@@ -21,6 +21,12 @@ class Rectangle(Base):
         if Rectangle.c_type(y, "y") and Rectangle.c_val(y, "y"):
             self.__y = y
 
+    def display(self):
+        """ print the rect """
+        for i in range(self.height):
+            print("#" * self.width)
+        return None
+            
     def area(self):
         """ area function """
         return self.width * self.height
