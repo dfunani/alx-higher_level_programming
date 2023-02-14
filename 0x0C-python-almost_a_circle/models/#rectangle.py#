@@ -23,8 +23,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """ str rep of the rect """
-        a = f"{self.x}/{self.y}"
-        return f"[Rectangle] ({self.id}) {a} - {self.width}/{self.height}"
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
 
     def display(self):
         """ print the rect """
