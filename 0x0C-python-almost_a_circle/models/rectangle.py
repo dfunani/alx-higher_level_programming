@@ -26,18 +26,18 @@ class Rectangle(Base):
         if args:
             for arg in range(len(args)):
                 if arg == 0:
-                    if not args[i]:
+                    if not args[arg]:
                         self.__init__(self.width, self.height, self.x, self.y)
                     else:
-                        self.id = args[0]
-                elif arg == 1:
-                    self.width = args[1]
-                elif arg == 2:
-                    self.height = args[2]
-                elif arg == 3:
-                    self.x = args[3]
-                elif arg == 4:
-                    self.y = args[4]
+                        self.id = args[arg]
+                if arg == 1:
+                    self.width = args[arg]
+                if arg == 2:
+                    self.height = args[arg]
+                if arg == 3:
+                    self.x = args[arg]
+                if arg == 4:
+                    self.y = args[arg]
 
     def __str__(self):
         """ str rep of the rect """
