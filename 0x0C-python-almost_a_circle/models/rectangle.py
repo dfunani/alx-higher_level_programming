@@ -21,6 +21,10 @@ class Rectangle(Base):
         if Rectangle.c_type(y, "y") and Rectangle.c_val(y, "y"):
             self.__y = y
 
+    def __str__(self):
+        """ str rep of the rect """
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+
     def display(self):
         """ print the rect """
         for i in range(self.height):
