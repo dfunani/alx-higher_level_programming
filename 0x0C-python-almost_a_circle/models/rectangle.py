@@ -21,6 +21,10 @@ class Rectangle(Base):
         if Rectangle.c_type(y, "y") and Rectangle.c_val(y, "y"):
             self.__y = y
 
+    def area(self):
+        """ area function """
+        return self.width * self.height
+
     @property
     def width(self):
         return self.__width
