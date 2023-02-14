@@ -28,7 +28,7 @@ class Rectangle(Base):
 
     def display(self):
         """ print the rect """
-        if x < 0 or y < 0:
+        if self.x < 0 or self.y < 0 or type(x) is not int or type(y) is not int:
             return None
         for i in range(self.height):
             print("#" * self.width)
