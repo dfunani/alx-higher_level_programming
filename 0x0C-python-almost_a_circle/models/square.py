@@ -12,6 +12,7 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """ constr class and inherit from base """
         super().__init__(size, size, x, y, id)
+        self.__size = size
 
     def update(self, *args, **kwargs):
         """ updates the instance attrs """
@@ -50,7 +51,7 @@ class Square(Rectangle):
     def __str__(self):
         """ str rep of the rect """
         a = f"{self.x}/{self.y}"
-        return f"[Square] ({self.id}) {a} - {self.width}"
+        return f"[Square] ({self.id}) {a} - {self.size}"
 
     def display(self):
         """ print the rect """
@@ -65,42 +66,6 @@ class Square(Rectangle):
     def area(self):
         """ area function """
         return self.width * self.height
-
-    @property
-    def width(self):
-        return self.__width
-
-    @property
-    def height(self):
-        return self.__height
-
-    @property
-    def x(self):
-        return self.__x
-
-    @property
-    def y(self):
-        return self.__y
-
-    @width.setter
-    def width(self, val):
-        if Rectangle.c_type(val, "w") and Rectangle.c_val(val, "w"):
-            self.__width = val
-
-    @height.setter
-    def height(self, val):
-        if Rectangle.c_type(val, "h") and Rectangle.c_val(val, "h"):
-            self.__height = val
-
-    @x.setter
-    def x(self, val):
-        if Rectangle.c_type(val, "x") and Rectangle.c_val(val, "x"):
-            self.__x = val
-
-    @y.setter
-    def y(self, val):
-        if Rectangle.c_type(val, "y") and Rectangle.c_val(val, "y"):
-            self.__y = val
 
     @staticmethod
     def c_type(val, attr):
