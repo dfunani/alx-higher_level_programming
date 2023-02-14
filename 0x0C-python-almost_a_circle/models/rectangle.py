@@ -35,16 +35,34 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, val):
-        self.__width = val
+        if Rectangle.check_type(val, "width") and Rectangle.check_val(val, "width"):
+            self.__width = val
 
     @height.setter
     def height(self, val):
-        self.__height = val
+        if Rectangle.check_type(val, "height") and Rectangle.check_val(val, "height"):
+            self.__height = val
 
     @x.setter
     def x(self, val):
-        self.__x = val
+        if Rectangle.check_type(val, "x") and Rectangle.check_val(val, "x"):
+            self.__x = val
 
     @y.setter
     def y(self, val):
-        self.__y = val
+        if Rectangle.check_type(val, "y") and Rectangle.check_val(val, "y"):
+            self.__y = val
+
+    @staticmethod
+    def check_type(val, attr):
+        if type(val) is int:
+            return True
+        raise TypeError(f"{attr} must be an integer")
+
+    @staticmethod
+    def check_val(val, attr):
+        if val <= 0 and (attr == "width" or attr == "height"):
+            raise ValueError(f"{attr} must be > 0")
+        if val < 0 and (attr == "x" or attr == "y"):
+            raise ValueError(f"{attr} must be >= 0")
+        return True
