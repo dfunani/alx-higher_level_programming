@@ -62,7 +62,7 @@ class Rectangle(Base):
         if attr == "h":
             attr = "height"
         if attr == "w":
-            attr = "weight"
+            attr = "width"
         if type(val) is int:
             return True
         raise TypeError(f"{attr} must be an integer")
@@ -70,10 +70,10 @@ class Rectangle(Base):
     @staticmethod
     def c_val(val, attr):
         if attr == "w":
-            attr = "weight"
+            attr = "width"
         if attr == "h":
             attr = "height"
-        if val <= 0 and (attr == "weight" or attr == "height"):
+        if val <= 0 and (attr == "width" or attr == "height"):
             raise ValueError(f"{attr} must be > 0")
         if val < 0 and (attr == "x" or attr == "y"):
             raise ValueError(f"{attr} must be >= 0")
