@@ -21,6 +21,14 @@ class Rectangle(Base):
         if Rectangle.c_type(y, "y") and Rectangle.c_val(y, "y"):
             self.__y = y
 
+    def update(self, *args):
+        """ updates the instance attrs """
+        self.id = args[0]
+        self.width = args[1]
+        self.height = args[2]
+        self.x = args[3]
+        self.y = args[4]
+
     def __str__(self):
         """ str rep of the rect """
         a = f"{self.x}/{self.y}"
