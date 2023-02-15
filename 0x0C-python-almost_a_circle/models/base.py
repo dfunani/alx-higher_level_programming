@@ -61,3 +61,39 @@ class Base:
         res.y = 0
         res.update(**dictionary)
         return res
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Serializes to csv a list of instances"""
+        if list_objs is None:
+            list_objs = []
+
+        filename = "{}.csv".format(cls.__name__)
+        attrs = ('id', 'size', 'width', 'height', 'x', 'y')
+        with open(filename, "w", encoding="utf-8") as f:
+            for o in list_objs:
+                d = o.to_dictionary()
+                t = []
+                for attr in attrs:
+                    if attr not in d:
+                        continue
+                    t.append(str(d.get(attr)))
+                f.write(",".join(t))
+                f.write("\n")
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """deserializes CSV"""
+        filename = "{}.csv".format(cls.__name__)
+
+        if not os.path.exists(filename):
+            return []
+
+        list_objs = []
+        with open(filename, "r", encoding="utf-8") as f:
+            for line in f:
+                arguments = line[:-1].split(",")
+                o = cls(1, 1)
+                o.update(*[int(x) for x in arguments])
+                list_objs.append(o)
+        return list_objs
