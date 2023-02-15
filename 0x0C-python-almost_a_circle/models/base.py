@@ -28,6 +28,12 @@ class Base:
             list_dictionaries = []
         return json.dumps(list_dictionaries)
 
+    @staticmethod
+    def from_json_string(json_string):
+        if not json_string:
+            return []
+        return json.loads(json_string)
+
     @classmethod
     def save_to_file(cls, list_objs):
         if not list_objs:
