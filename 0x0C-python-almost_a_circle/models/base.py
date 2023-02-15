@@ -24,4 +24,6 @@ class Base:
         """ serializes a list of dicts """
         if not list_dictionaries:
             list_dictionaries = []
+        if type(list_dictionaries) == list:
+            raise TypeError("list_dictionaries must be a list of dictionaries")
         return json.dumps(list_dictionaries)
