@@ -57,3 +57,6 @@ class Square(Rectangle):
         if Rectangle.c_type(val, "w") and Rectangle.c_val(val, "w"):
             self.width = val
             self.height = val
+
+    def to_dictionary(self):
+        return {"id": self.id, "size": self.size, "x": self.x, "y": self.y}
