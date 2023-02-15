@@ -59,4 +59,5 @@ class Square(Rectangle):
             self.height = val
 
     def to_dictionary(self):
+        """ square dict """
         return {"id": self.id, "size": self.size, "x": self.x, "y": self.y}
