@@ -21,6 +21,17 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+    @classmethod
+    def load_from_file(cls):
+        """ load instances """
+        try:
+            with open(f"{cls.__name__}.json", "r") as file:
+                json_string = file.read()
+                list_dicts = Base.from_json_string(json_string)
+                return [cls.create(**item) for item in list_dicts]
+        except:
+            return []
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """ serializes a list of dicts """
