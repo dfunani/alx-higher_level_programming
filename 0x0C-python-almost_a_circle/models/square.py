@@ -24,12 +24,11 @@ class Square(Rectangle):
             for arg in range(len(args)):
                 if arg == 0:
                     if not args[arg]:
-                        self.__init__(self.size, self.size, self.x, self.y)
+                        self.__init__(self.size, self.x, self.y)
                     else:
                         self.id = args[arg]
                 if arg == 1:
-                    self.width = args[arg]
-                    self.height = args[arg]
+                    self.size = args[arg]
                 if arg == 2:
                     self.x = args[arg]
                 if arg == 3:
@@ -43,8 +42,7 @@ class Square(Rectangle):
                     else:
                         self.id = kwargs[key]
                 if key == "size":
-                    self.width = kwargs[key]
-                    self.height = kwargs[key]
+                    self.size = kwargs[key]
                 if key == "x":
                     self.x = kwargs[key]
                 if key == "y":
