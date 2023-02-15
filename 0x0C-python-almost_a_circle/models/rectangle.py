@@ -22,7 +22,9 @@ class Rectangle(Base):
             self.__y = y
 
     def to_dictionary(self):
-        return {"x": self.x, "y": self.y, "id": self.id, "height": self.height, "width": self.width}
+        """ dictionary rep of the class """
+        return {"id": self.id, "width": self.width,
+                "height": self.height, "x": self.x, "y": self.y}
 
     def update(self, *args, **kwargs):
         """ updates the instance attrs """
