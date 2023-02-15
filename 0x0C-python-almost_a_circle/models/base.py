@@ -2,6 +2,7 @@
 """base
 create a base class for inheritence by higher order classes
 """
+import os
 import json
 
 
