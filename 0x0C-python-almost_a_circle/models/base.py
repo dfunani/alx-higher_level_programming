@@ -45,6 +45,8 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """ create instance """
-        res = cls(1, 1, 0, 0)
+        res = cls(1, 1)
+        res.x = 0
+        res.y = 0
         res.update(**dictionary)
         return res
