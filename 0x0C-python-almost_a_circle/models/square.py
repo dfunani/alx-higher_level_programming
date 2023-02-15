@@ -28,7 +28,8 @@ class Square(Rectangle):
                     else:
                         self.id = args[arg]
                 if arg == 1:
-                    self.size = args[arg]
+                    self.width = args[arg]
+                    self.height = args[arg]
                 if arg == 2:
                     self.x = args[arg]
                 if arg == 3:
@@ -42,6 +43,7 @@ class Square(Rectangle):
                     else:
                         self.id = kwargs[key]
                 if key == "size":
+                    self.width = kwargs[key]
                     self.height = kwargs[key]
                 if key == "x":
                     self.x = kwargs[key]
