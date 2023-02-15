@@ -41,3 +41,8 @@ class Base:
         with open(f"{cls.__name__}.json", "w") as file:
             file.write(Base.to_json_string(
                 [objs.to_dictionary() for objs in list_objs]))
+
+    @classmethod
+    def create(cls, **dictionary):
+        cls.update(dictionary)
+        return cls
