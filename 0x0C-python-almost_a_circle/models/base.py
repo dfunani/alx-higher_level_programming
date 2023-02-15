@@ -29,7 +29,7 @@ class Base:
                 json_string = file.read()
                 list_dicts = Base.from_json_string(json_string)
                 return [cls.create(**item) for item in list_dicts]
-        except:
+        except Exception:
             return []
 
     @staticmethod
