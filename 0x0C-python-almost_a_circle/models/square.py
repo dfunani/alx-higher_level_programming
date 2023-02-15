@@ -18,6 +18,36 @@ class Square(Rectangle):
         a = f"{self.x}/{self.y}"
         return f"[Square] ({self.id}) {a} - {self.width}"
 
+    def update(self, *args, **kwargs):
+        """ updates the instance attrs """
+        if args:
+            for arg in range(len(args)):
+                if arg == 0:
+                    if not args[arg]:
+                        self.__init__(self.size, self.size, self.x, self.y)
+                    else:
+                        self.id = args[arg]
+                if arg == 1:
+                    self.size = args[arg]
+                if arg == 2:
+                    self.x = args[arg]
+                if arg == 3:
+                    self.y = args[arg]
+
+        elif kwargs:
+            for key in kwargs:
+                if key == "id":
+                    if not kwargs[key]:
+                        self.__init__(self.size, self.x, self.y)
+                    else:
+                        self.id = kwargs[key]
+                if key == "size":
+                    self.height = kwargs[key]
+                if key == "x":
+                    self.x = kwargs[key]
+                if key == "y":
+                    self.y = kwargs[key]
+
     @property
     def size(self):
         return self.width
