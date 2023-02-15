@@ -21,6 +21,9 @@ class Rectangle(Base):
         if Rectangle.c_type(y, "y") and Rectangle.c_val(y, "y"):
             self.__y = y
 
+    def to_dictionary(self):
+        return {"x": self.x, "y": self.y, "id": self.id,
+                "height": self.height, "width": self.width}
     def update(self, *args, **kwargs):
         """ updates the instance attrs """
         if args:
