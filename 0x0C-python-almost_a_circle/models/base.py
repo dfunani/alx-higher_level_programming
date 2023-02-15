@@ -24,4 +24,4 @@ class Base:
         """ serializes a list of dicts """
         if not list_dictionaries:
             list_dictionaries = []
-        return json.dump(list_dictionaries)
+        return json.dumps(list_dictionaries)
