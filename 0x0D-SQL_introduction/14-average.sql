@@ -1,2 +1,2 @@
 -- Average
-SELECT AVE(score) as average FROM second_table;
+SELECT AVE('score') as average FROM second_table;
