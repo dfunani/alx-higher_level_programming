@@ -1,6 +1,6 @@
 -- join tables
-SELECT id, name, state.name
-  FROM cities
-       INNER JOIN states AS state
-       ON state_id = state.id
- ORDER BY id;
+SELECT cities.id, cities.name, states.name
+  FROM hbtn_0d_usa.cities AS cities
+       INNER JOIN hbtn_0d_usa.states AS states
+       ON cities.state_id = states.id
+ ORDER BY cities.id;
