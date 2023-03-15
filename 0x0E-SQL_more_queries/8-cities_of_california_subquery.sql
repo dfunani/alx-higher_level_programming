@@ -1,6 +1,6 @@
 -- GET Cali
-SELECT id, name FROM hbtn_0d_usa.cities
+SELECT id, name FROM cities
 WHERE state_id IN (
-SELECT id FROM hbtn_0d_usa.states
+SELECT id FROM states
 WHERE name = 'California')
-ORDER BY id
+ORDER BY id;
