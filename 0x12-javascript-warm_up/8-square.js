@@ -7,7 +7,7 @@ if (isNaN(process.argv[2])) {
   for (let i = 0; i < parseInt(process.argv[2]); i++) {
     let res = '';
     for (let j = 0; j < parseInt(process.argv[2]); j++) {
-	    res += '*';
+      res += '*';
     }
     console.log(res);
   }
