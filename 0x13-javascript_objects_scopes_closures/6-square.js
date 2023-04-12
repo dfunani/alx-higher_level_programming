@@ -1,7 +1,7 @@
 0;10;1c#!/usr/bin/node
 module.exports = class Square extends require('5-square.js') {
-    charPrint(c = null) {
-	if (!c)
+    charPrint(c = 'X') {
+	if (!c || c == 'X')
 	{
 	    super.print()
 	}
