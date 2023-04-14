@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""*.py
+"""0-select_states.py
 Application for running sql scripts either using
 ORM or DDL"""
 
