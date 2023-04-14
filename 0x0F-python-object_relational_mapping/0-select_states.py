@@ -23,7 +23,7 @@ def main(username, password, name):
     db = MySQLdb(host=localhost, port=port, user=username, passwd=password,
                  db=name, charset=charset)
     cursor = db.cursor()
-    cursor.execute(f"SELECT * FROM {name}.states ORDER BY states.id ASC;")
+    cursor.execute(f"SELECT * FROM states ORDER BY states.id ASC;")
     result = cursor.fetchall()
     for i, elem in enumerate(result, 1):
         print(elem)
