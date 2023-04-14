@@ -14,6 +14,9 @@ if __name__ == "__main__":
 
     return: None
     """
+    import sys
+    import MySQLdb
+
     db = MySQLdb(host='localhost', port=3306, user=username, passwd=password,
                  db=name, charset=charset)
     cursor = db.cursor()
