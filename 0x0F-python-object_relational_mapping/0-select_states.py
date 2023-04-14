@@ -9,6 +9,7 @@ localhost = 'localhost'
 port = 3306
 charset = 'utf8'
 
+
 def main(username, password, name):
     """Project-Entry
     Description: runs a sql query
@@ -19,13 +20,13 @@ def main(username, password, name):
 
     return: None
     """
-    db = MySQLdb(host=localhost, port=port, user=username, passwd=password,\
+    db = MySQLdb(host=localhost, port=port, user=username, passwd=password,
                  db=name, charset=charset)
     cursor = db.cursor()
-    cursor.execute(f"SELECT * FROM {name}.states ORDER BY states.id")
+    cursor.execute(f"SELECT * FROM {name}.states ORDER BY states.id ASC;")
     result = cursor.fetchall()
     for i, elem in enumerate(result, 1):
-        print((i, elem))
+        print(elem)
     return
 
 
