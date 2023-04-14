@@ -6,7 +6,7 @@ import sys
 import MySQLdb
 
 localhost = 'localhost'
-port = 3306
+port = '3306'
 charset = 'utf8'
 
 
