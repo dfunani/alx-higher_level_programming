@@ -2,9 +2,6 @@
 """*.py
 Application for running sql scripts either using
 ORM or DDL"""
-import sys
-import MySQLdb
-
 localhost = 'localhost'
 port = '3306'
 charset = 'utf8'
@@ -31,5 +28,7 @@ def main(username, password, name):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) == 4:
-        main(sys.argv[1], sys.argv[2], sys.argv[3])
+    import sys
+    import MySQLdb
+
+    main(sys.argv[1], sys.argv[2], sys.argv[3])
