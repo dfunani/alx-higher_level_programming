@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Module covers a significant component of web servers and clients """
+"""Module covers a significant component of web servers and clients """
 from urllib import request
 
 if __name__ == "__main__":
