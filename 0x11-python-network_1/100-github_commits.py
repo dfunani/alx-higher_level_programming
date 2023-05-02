@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ Module covers a significant component of web servers and clients """
-import sys
+import requests
 from sys import argv as a
 
 if __name__ == "__main__":
