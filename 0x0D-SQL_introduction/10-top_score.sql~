@@ -1,2 +1,0 @@
--- display records
-SELECT score, id FROM second_table ORDER BY score DESC;

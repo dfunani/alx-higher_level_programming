@@ -1,4 +1,0 @@
--- Average
-SELECT city, AVG(value) AS avg_temp
-GROUP city
-ORDER BY avg_temp DESC;
