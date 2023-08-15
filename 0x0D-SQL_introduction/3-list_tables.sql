@@ -1,0 +1,2 @@
+-- Create DB
+SHOW TABLES;
