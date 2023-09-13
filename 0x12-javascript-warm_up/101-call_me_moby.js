@@ -1,4 +1,7 @@
 #!/usr/bin/node
 // script that prints “Javascript is amazing”
-const myVar = 'JavaScript is amazing';
-console.log(myVar);
+exports.callMeMoby = function (x, myFunction) {
+  for (let i = 0; i < x; i++) {
+    myFunction();
+  }
+}
